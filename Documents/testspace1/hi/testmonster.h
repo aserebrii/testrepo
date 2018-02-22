@@ -5,6 +5,8 @@
 #include <time.h>
 #include <stdlib.h>
 #include "atk.h"
+
+using namespace std;
 class monst{
 private:
 	string name;
@@ -22,7 +24,7 @@ private:
 	//implement abilities class
 	bool status;
 	int ablquant;
-	vector<attack> atks
+	vector<attack> atks;
 public:	
 	monst();
 	monst(string infostring);
@@ -53,7 +55,7 @@ public:
 	int getAblQuant();
 	void setAblQuant(int newquant);
 	~monst();
-}
+};
 
 
 #endif

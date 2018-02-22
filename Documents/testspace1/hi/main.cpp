@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "testmonster.h"
+#include "atk.h"
 using namespace std;
 int main()
 {
@@ -23,5 +25,7 @@ int main()
 		
 	}
 	cout<<h;
+	monst *mymonst = new monst();
+	delete mymonst;
 	return 0;
 }
