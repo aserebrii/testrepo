@@ -23,10 +23,10 @@ private:
 	bool status;
 	int ablquant;
 	vector<attack> atks
-public:
-	string getName();
+public:	
 	monst();
 	monst(string infostring);
+	string getName();
 	void setName(string newname);
 	int getHP();
 	void setHP(int newhp);
