@@ -1,8 +1,13 @@
 #ifndef TESTMONSTER_H
 #define TESTMONSTER_H
 #include <string>
+#include <vector>
+#include <time.h>
+#include <stdlib.h>
+#include "atk.h"
 class monst{
 private:
+	string name;
 	int hp;
 	int ac;
 	int srg;//strength
@@ -13,16 +18,41 @@ private:
 	int cha;
 	int atckquant;
 	int speed;
+	//implement status effect class
+	//implement abilities class
+	bool status;
 	int ablquant;
-	
+	vector<attack> atks
 public:
-//atk might be better declared as a vector of ints
-//should be structured tohit, dmg
-//attacks can also be handled via a separate class
-//this should allow for the utilization of multiple attacks on a monster
-//consider second method first
-	int atk(int dice, int dicetype,int reps,int bonus);
-//implement abilities
+	string getName();
+	monst();
+	monst(string infostring);
+	void setName(string newname);
+	int getHP();
+	void setHP(int newhp);
+	int getAC();
+	void setAC(int newac);
+	int getSRG();
+	void setSRG(int newsrg);
+	int getDex();
+	void setDex(int newdex);
+	int getItl();
+	void setItl(int newitl);
+	int getWis();
+	void setWis(int newwis);
+	int getCon();
+	void setCon(int newcon);
+	int getCha();
+	void setCha(int newcha);
+	int getAtckquant();
+	void setAtckquant(int newquant);
+	int getSpeed();
+	void setSpeed(int newspeed);
+	bool getStatus();
+	void setStatus(bool newstat);
+	int getAblQuant();
+	void setAblQuant(int newquant);
+	~monst();
 }
 
 
