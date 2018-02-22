@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cmath>
+#include <time.h>
+#include <stdlib.h>
 #include "atk.h"
 
 using namespace std;
@@ -58,11 +60,18 @@ void attack::setDiceQuant(int numofdice)
 
 int attack::tohit(int plustohit)
 {
-	//random roll between 1 and 20 + plus to hit
+	srand(time(NULL));
+	return (rand()%21+1)+plustohit;
 }
 
 int attack::damageRoll(int damagebonus)
 {
 	//do the dice sim!
 	//random number 1 and dicetype inclusive * dice quantity
+	int sum=0;
+	for(int i =0;i<dicequant;i++)
+	{
+		srand(time(NULL));
+		sum+=rand()%dicetype+1
+	}
 }
